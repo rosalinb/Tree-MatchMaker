@@ -1,0 +1,52 @@
+/* History */
+.history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    
+  }
+  
+  .history-item-card {
+    background: var(--card-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+
+  }
+
+  .history-item-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .history-question {
+    font-family: var(--primary-font);
+    color:var(--secondary-color);
+  }
+
+  .history-item-card button {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .history-item-card button:hover
+{
+  background-color: var(--primary-color);
+  transform: scale(1.1);  /* Slight scaling effect on hover */
+  transition: all 0.3s ease;
+}  
+  .history-item-card button.selected-answer {
+    background-color: var(--secondary-color);
+  }
+  
+  .history-item-card button.available-options {
+    background-color: #e0e0e0;
+    color: black;
+  }

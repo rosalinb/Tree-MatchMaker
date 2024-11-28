@@ -1,0 +1,100 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+/* Define Primary and Secondary Fonts using CSS Variables */
+:root {
+  --primary-font: 'Nunito', sans-serif;
+  --secondary-font: 'Fredoka', sans-serif;
+  --primary-header-color:#700548;
+  --primary-color: #0077b6;
+  --secondary-color:  #03045e;
+  --card-color:#fefae0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 70px; /* Space for the fixed footer */
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+
+/* App Wrapper */
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.app-main-container {
+  flex: 1; /* Allow main content to take the remaining space */
+  padding: 20px;
+}
+
+/* Header */
+.app-header {
+  color: var(--primary-header-color);
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: black;
+  padding: 1rem;
+  /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); */
+  z-index: 1000;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+                                                                                                                         
+
+/* Responsive Design - move it to each file or keep it here ?*/
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px; /* Ensure footer space on mobile */
+  }
+
+  .landing-page-card {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .match-result-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .history-item-card {
+    padding: 12px;
+  }
+
+  .question-card {
+    padding: 15px;
+  }
+}
